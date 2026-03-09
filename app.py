@@ -9,25 +9,36 @@ import gradio as gr
 
 load_dotenv(override=True)
 
-def push(text):
-    requests.post(
-        "https://api.pushover.net/1/messages.json",
-        data={
-            "token": os.getenv("PUSHOVER_TOKEN"),
-            "user": os.getenv("PUSHOVER_USER"),
-            "message": text,
-        }
-    )
+FORMSPREE_ENDPOINT = os.getenv("FORMSPREE_ENDPOINT")
+def push(data):
+    try:
+        r = requests.post(
+            FORMSPREE_ENDPOINT,
+            json=data,
+            headers={"Accept": "application/json"}
+        )
+        print("Formspree status:", r.status_code)
+        print("Formspree response:", r.text)
+    except Exception as e:
+        print("Error enviando a Formspree:", e)
 
 
 def record_user_details(email, name="Nombre no indicado", notes="no proporcionadas"):
     """Registra los detalles de un usuario que está interesado en estar en contacto y proporcionó una dirección de correo electrónico."""
-    push(f"Registrando {name} con email {email} y notas {notes}")
-    return {"recorded": "ok"}
+    push({
+    "type": "contact",
+    "name": name,
+    "email": email,
+    "notes": notes
+    })
+    return {"recorded": True}
 
 def record_unknown_question(question):
     """Registra una pregunta que no se ha podido responder."""
-    push(f"Registrando {question}")
+    push({
+    "type": "unknown_question",
+    "question": question
+    })
     return {"recorded": "ok"}
 
 record_user_details_json = {
@@ -119,7 +130,7 @@ class Me:
         messages = [{"role": "system", "content": self.system_prompt()}] + history + [{"role": "user", "content": message}]
         done = False
         while not done:
-            response = self.openai.chat.completions.create(model="gpt-4o-mini", messages=messages, tools=tools)
+            response = self.openai.chat.completions.create(model="llama3-70b-8192", messages=messages, tools=tools)
             if response.choices[0].finish_reason=="tool_calls":
                 message = response.choices[0].message
                 tool_calls = message.tool_calls
