@@ -127,22 +127,49 @@ class Me:
         return system_prompt
     
     def chat(self, message, history):
-        messages = [{"role": "system", "content": self.system_prompt()}] + history + [{"role": "user", "content": message}]
+
+        messages = [{"role": "system", "content": self.system_prompt()}]
+
+        # limpiar history que viene de gradio
+        for msg in history:
+            if isinstance(msg, dict):
+                messages.append({
+                    "role": msg["role"],
+                    "content": msg["content"]
+                })
+            else:
+                user, assistant = msg
+                messages.append({"role": "user", "content": user})
+                messages.append({"role": "assistant", "content": assistant})
+
+        messages.append({"role": "user", "content": message})
+
         done = False
+
         while not done:
-            response = self.openai.chat.completions.create(model="llama3-70b-8192", messages=messages, tools=tools)
-            if response.choices[0].finish_reason=="tool_calls":
+
+            response = self.openai.chat.completions.create(
+                model="llama-3.1-8b-instant",
+                messages=messages,
+                tools=tools
+            )
+
+            if response.choices[0].finish_reason == "tool_calls":
+
                 message = response.choices[0].message
                 tool_calls = message.tool_calls
+
                 results = self.handle_tool_call(tool_calls)
+
                 messages.append(message)
                 messages.extend(results)
+
             else:
                 done = True
+
         return response.choices[0].message.content
     
 
 if __name__ == "__main__":
     me = Me()
-    gr.ChatInterface(me.chat, type="messages").launch()
-    
+    gr.ChatInterface(me.chat).launch()
