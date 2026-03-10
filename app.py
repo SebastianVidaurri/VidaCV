@@ -170,6 +170,8 @@ class Me:
         return response.choices[0].message.content
     
 
+me = Me()
+demo = gr.ChatInterface(me.chat)
+
 if __name__ == "__main__":
-    me = Me()
-    gr.ChatInterface(me.chat).launch()
+    demo.launch()
