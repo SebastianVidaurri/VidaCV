@@ -5,3 +5,6 @@ pypdf
 openai
 openai-agents
 groq
+sentence-transformers
+faiss-cpu
+numpy

@@ -1,0 +1,52 @@
+Lenguajes de programación
+
+- Python
+- Java
+- JavaScript
+- R
+
+Ciencia de datos y machine learning
+
+- Pandas
+- NumPy
+- Scikit-learn
+- TensorFlow
+
+Análisis y visualización de datos
+
+- Power BI
+- Matplotlib
+- Seaborn
+- Excel avanzado
+
+Herramientas de desarrollo
+
+- Git
+- Github
+- Jupyter Notebook
+- Google Colab
+
+Desarrollo backend
+
+- Java
+- Spring Boot
+- desarrollo de APIs REST
+- integración con bases de datos MySQL
+
+Desarrollo frontend
+
+- HTML
+- CSS
+- JavaScript
+- manipulación del DOM
+- consumo de APIs REST
+- asincronía con fetch y promesas
+
+Procesos de ciencia de datos
+
+- ETL
+- análisis exploratorio de datos (EDA)
+- limpieza y transformación de datos
+- entrenamiento de modelos
+- evaluación de métricas
+- comunicación de resultados

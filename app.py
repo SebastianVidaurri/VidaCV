@@ -129,7 +129,7 @@ class Me:
             - Si te hacen una pregunta que no puedes responder con la información disponible, utiliza 'record_unknown_question' para registrar la pregunta y no la respuesta.
 
             ### INSTRUCCIONES TÉCNICAS (CRÍTICAS)
-            - NO menciones el nombre de las herramientas al usuario.
+            - NO mencion es el nombre de las herramientas al usuario.
             - NO escribas la llamada a la función en el texto (ej. no escribas <function=... >). 
             - Cuando decidas usar una herramienta, simplemente ejecútala. No des explicaciones de que vas a registrar los datos."""
         

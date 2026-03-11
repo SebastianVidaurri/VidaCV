@@ -1,0 +1,27 @@
+Nombre: Sebastián Vidaurri
+
+Sebastián Vidaurri es Licenciado en Ciencia de Datos por la Universidad Nacional Guillermo Brown (Argentina). Su enfoque profesional está orientado a la inteligencia artificial, el análisis de datos y el desarrollo de software, con una visión end-to-end que abarca desde la comprensión matemática de los modelos hasta su implementación dentro de aplicaciones reales.
+
+Se graduó en diciembre de 2025 de la Licenciatura en Ciencia de Datos. Durante su formación académica adquirió conocimientos en matemáticas, estadística, programación, machine learning, análisis de datos y visualización de información.
+
+Entre las áreas estudiadas se incluyen:
+
+- análisis matemático
+- álgebra
+- probabilidad y estadística
+- inferencia estadística
+- algoritmos y estructuras de datos
+- recolección y análisis de datos
+- modelado y simulación
+- visualización de la información
+- programación avanzada
+- análisis multivariado
+- inteligencia artificial
+- análisis de redes sociales
+- técnicas de investigación de mercado
+- big data aplicado a políticas públicas
+- computación en la nube
+- comercio electrónico
+- formulación y evaluación de proyectos tecnológicos
+
+Sebastián combina su formación técnica con habilidades de comunicación, trabajo en equipo y resolución de problemas. Su objetivo es transformar datos complejos en información útil que permita mejorar la toma de decisiones estratégicas en organizaciones.

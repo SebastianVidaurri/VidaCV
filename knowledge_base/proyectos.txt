@@ -1,0 +1,54 @@
+Proyecto de tesis
+
+Título:
+Detección de Asentamientos Informales en Buenos Aires mediante Deep Learning e imágenes satelitales.
+
+Descripción:
+
+En este proyecto se desarrollaron modelos de deep learning para detectar asentamientos informales en la ciudad de Buenos Aires utilizando imágenes satelitales del satélite Sentinel-2.
+
+Se aplicó un enfoque de transfer learning utilizando el modelo ResNet50 So2Sat implementado con TensorFlow. Además se entrenó una red neuronal desde cero utilizando el mismo dataset con el objetivo de comparar ambos enfoques.
+
+Se evaluó el rendimiento de los modelos utilizando distintas métricas de clasificación y se analizaron los resultados para comprender el impacto del transfer learning en este tipo de problema.
+
+Proyecto profesional: Mejora de plataforma POSNET
+
+Sebastián participó en el relevamiento de mejoras para una plataforma interna utilizada por distintos equipos de la empresa como servicio técnico, call center, logística, áreas comerciales y soporte.
+
+La plataforma tiene más de diez años de antigüedad y fue desarrollada en Java 8.
+
+Responsabilidades en el proyecto:
+
+- reuniones con cada área para detectar problemas y necesidades
+- análisis de procesos internos
+- priorización de requerimientos
+- elaboración de propuestas de mejora
+
+Como resultado se identificaron y documentaron 85 requerimientos en un documento formal de requerimientos de negocio (BRD).
+
+Proyecto: recuperación de terminales POS y dispositivos Clover
+
+Debido a restricciones de importación de hardware, la empresa necesitaba recuperar dispositivos instalados que no generaban ingresos.
+
+Sebastián participó en:
+
+- identificación de equipos inactivos mediante consultas SQL
+- generación de órdenes de retiro
+- análisis económico de los dispositivos
+- desarrollo de dashboards de seguimiento con Power BI y Excel
+- generación de reportes semanales con indicadores de recupero
+
+Proyecto: cambio de layout de archivo de embozado
+
+Este proyecto implicó modificar el formato del archivo utilizado por las máquinas que producen tarjetas de crédito.
+
+El cambio fue necesario debido a actualizaciones en las claves de seguridad que requerían mayor espacio en los registros.
+
+El proyecto incluyó:
+
+- modificaciones en jobs de mainframe
+- cambios en configuración de embozadoras
+- revisión de claves criptográficas
+- coordinación entre equipos de desarrollo, operaciones, seguridad informática y área comercial
+
+Sebastián participó coordinando las tareas entre los distintos equipos involucrados.

@@ -1,0 +1,32 @@
+Sebastián Vidaurri trabaja actualmente en Fiserv en el área vinculada a tecnología de pagos y tarjetas.
+
+Cargo actual:
+Analista de laboratorio EMV
+
+Responsabilidades principales:
+
+- homologación de tecnologías de tarjetas con chip como Multos y Secora
+- configuración de software utilizado para procesar datos sensibles en archivos de embozado de tarjetas
+- aseguramiento del cumplimiento de estándares de seguridad como PCI
+- administración de entornos utilizados por el área de embozado de tarjetas
+
+Experiencia previa en la empresa:
+
+Auxiliar técnico
+
+Responsabilidades:
+
+- soporte a técnicos de campo
+- organización de tareas operativas del sector
+- análisis de información técnica
+- testeo de sistemas y dispositivos
+- coordinación de actividades logísticas relacionadas con terminales de pago
+
+Técnico de campo
+
+Responsabilidades:
+
+- reparación y puesta a punto de equipos POS y Clover
+- instalación de terminales de pago
+- soporte técnico a comercios
+- interacción directa con clientes para resolución de problemas técnicos
