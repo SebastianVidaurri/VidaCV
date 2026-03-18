@@ -7,8 +7,6 @@ from pypdf import PdfReader
 import gradio as gr
 from rag import RAG
 
-rag = RAG()
-
 load_dotenv(override=True)
 
 FORMSPREE_ENDPOINT = os.getenv("FORMSPREE_ENDPOINT")
@@ -91,6 +89,7 @@ tools = [{"type": "function", "function": record_user_details_json},
 class Me:
 
     def __init__(self):
+        self.rag = RAG()
         self.openai = OpenAI(api_key=os.getenv("GROQ_API_KEY"),
                             base_url="https://api.groq.com/openai/v1")
         self.name = "Sebastián Vidaurri"
@@ -238,9 +237,14 @@ class Me:
     
     def chat(self, message, history):
 
+            # 🔥 limitar historial
+        history = history[-6:]
         # 🔥 RAG: buscar contexto relevante
-        context = self.rag.search(message)
+        context = self.rag.search(message, k=3)
         context_text = "\n\n".join(context)
+
+        # 🔥 recorte de seguridad
+        context_text = context_text[:1500]
 
         messages = [{
                         "role": "system",

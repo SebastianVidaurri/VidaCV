@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 class RAG:
 
     def __init__(self, knowledge_path="knowledge"):
-
+        
         self.model = SentenceTransformer("all-MiniLM-L6-v2")
 
         self.texts = []
