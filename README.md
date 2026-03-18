@@ -1,3 +1,13 @@
+---
+title: VidaCV
+emoji: 🤖
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+app_file: app.py
+pinned: false
+---
+
 # 🤖 VidaCV – AI-Powered Interactive Resume
 
 ## 🌐 Demo en vivo
