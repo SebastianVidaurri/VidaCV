@@ -29,7 +29,18 @@ class RAG:
             with open(os.path.join(path, file), "r", encoding="utf-8") as f:
                 text = f.read()
 
-                chunks = text.split("\n\n")
+                chunks = []
+                current_chunk = ""
+
+                for line in text.split("\n"):
+                    if len(current_chunk) + len(line) < 500:
+                        current_chunk += " " + line
+                    else:
+                        chunks.append(current_chunk.strip())
+                        current_chunk = line
+
+                if current_chunk:
+                    chunks.append(current_chunk.strip())
 
                 for chunk in chunks:
                     if chunk.strip():
