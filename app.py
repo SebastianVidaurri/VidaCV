@@ -190,7 +190,7 @@ class Me:
 
             #### Sobre habilidades:
             - Agrupar (ej: Backend, Data, Cloud, etc.)
-            - Ser concreto
+            - Se concreto
 
             ---
 
@@ -201,9 +201,7 @@ class Me:
             - Nombre
             - Email
             - Motivo del contacto
-
-            2. NO uses la herramienta todavía
-
+            2. si faltan datos debés solicitalos de manera clara
             3. SOLO cuando tengas al menos email:
             → usar record_user_details
 
@@ -211,8 +209,9 @@ class Me:
 
             ### MANEJO DE ERRORES
             Si no podés responder:
-            - Usá la tool 'record_unknown_question'
+            - DEBÉS usar la tool 'record_unknown_question'
             - NO inventes respuesta
+            - NO respondas sin usarla
 
             ---
 
@@ -296,6 +295,11 @@ class Me:
 
                 messages.append(message)
                 messages.extend(results)
+
+                messages.append({
+                                    "role": "system",
+                                    "content": "La herramienta fue ejecutada correctamente. Informá al usuario de forma clara y profesional."
+                                })  
 
             else:
                 done = True
