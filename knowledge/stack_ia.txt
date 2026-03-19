@@ -1,0 +1,12 @@
+Especialización en IA:
+
+Sebastián se especializa en:
+- Inteligencia Artificial Generativa
+- Modelos de lenguaje (LLMs)
+- Arquitecturas RAG
+- Sistemas de agentes
+- Integración de APIs de IA
+- Procesamiento de lenguaje natural (NLP)
+
+Enfoque:
+Construcción de soluciones reales que combinan IA con necesidades de negocio.

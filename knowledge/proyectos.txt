@@ -1,54 +1,99 @@
-Proyecto de tesis
+PROYECTOS
 
-Título:
-Detección de Asentamientos Informales en Buenos Aires mediante Deep Learning e imágenes satelitales.
+---
+
+Proyecto de tesis: Detección de asentamientos informales con Deep Learning
+
+Objetivo:
+Desarrollar un modelo capaz de detectar asentamientos informales en la Ciudad de Buenos Aires utilizando imágenes satelitales.
 
 Descripción:
+Se trabajó con imágenes del satélite Sentinel-2 y se aplicaron técnicas de Deep Learning para clasificación de imágenes.
 
-En este proyecto se desarrollaron modelos de deep learning para detectar asentamientos informales en la ciudad de Buenos Aires utilizando imágenes satelitales del satélite Sentinel-2.
+Enfoque técnico:
+- Implementación de transfer learning utilizando ResNet50 So2Sat con TensorFlow
+- Entrenamiento de una red neuronal desde cero para comparación de resultados
+- Evaluación mediante métricas de clasificación
 
-Se aplicó un enfoque de transfer learning utilizando el modelo ResNet50 So2Sat implementado con TensorFlow. Además se entrenó una red neuronal desde cero utilizando el mismo dataset con el objetivo de comparar ambos enfoques.
+Resultado:
+Se logró comparar el impacto del transfer learning frente a modelos entrenados desde cero, obteniendo insights relevantes sobre eficiencia y performance en problemas de visión satelital.
 
-Se evaluó el rendimiento de los modelos utilizando distintas métricas de clasificación y se analizaron los resultados para comprender el impacto del transfer learning en este tipo de problema.
+---
 
-Proyecto profesional: Mejora de plataforma POSNET
+Proyecto profesional: Mejora de plataforma interna POSNET
 
-Sebastián participó en el relevamiento de mejoras para una plataforma interna utilizada por distintos equipos de la empresa como servicio técnico, call center, logística, áreas comerciales y soporte.
+Contexto:
+Plataforma legacy utilizada por múltiples áreas (servicio técnico, call center, logística, comercial y soporte), con más de 10 años de antigüedad.
 
-La plataforma tiene más de diez años de antigüedad y fue desarrollada en Java 8.
+Responsabilidades:
+- Relevamiento de necesidades con stakeholders
+- Análisis de procesos internos
+- Priorización de requerimientos
+- Documentación funcional (BRD)
 
-Responsabilidades en el proyecto:
+Resultado:
+Se identificaron y documentaron 85 requerimientos de negocio, generando una base sólida para la modernización de la plataforma.
 
-- reuniones con cada área para detectar problemas y necesidades
-- análisis de procesos internos
-- priorización de requerimientos
-- elaboración de propuestas de mejora
+Impacto:
+Mejora en la alineación entre áreas técnicas y de negocio.
 
-Como resultado se identificaron y documentaron 85 requerimientos en un documento formal de requerimientos de negocio (BRD).
+---
 
-Proyecto: recuperación de terminales POS y dispositivos Clover
+Proyecto: Recuperación de terminales POS y dispositivos Clover
 
-Debido a restricciones de importación de hardware, la empresa necesitaba recuperar dispositivos instalados que no generaban ingresos.
+Contexto:
+Restricciones de importación generaron la necesidad de optimizar el uso de hardware existente.
 
-Sebastián participó en:
+Responsabilidades:
+- Identificación de dispositivos inactivos mediante SQL
+- Generación de órdenes de retiro
+- Análisis económico de recupero
+- Desarrollo de dashboards en Power BI y Excel
+- Generación de reportes semanales
 
-- identificación de equipos inactivos mediante consultas SQL
-- generación de órdenes de retiro
-- análisis económico de los dispositivos
-- desarrollo de dashboards de seguimiento con Power BI y Excel
-- generación de reportes semanales con indicadores de recupero
+Resultado:
+Optimización del recupero de dispositivos y mejora en la visibilidad operativa mediante métricas y dashboards.
 
-Proyecto: cambio de layout de archivo de embozado
+Impacto:
+Reducción de pérdidas económicas y mejor toma de decisiones basada en datos.
 
-Este proyecto implicó modificar el formato del archivo utilizado por las máquinas que producen tarjetas de crédito.
+---
 
-El cambio fue necesario debido a actualizaciones en las claves de seguridad que requerían mayor espacio en los registros.
+Proyecto: Cambio de layout de archivo de embozado
 
-El proyecto incluyó:
+Contexto:
+Actualización de claves de seguridad que requerían modificar la estructura del archivo utilizado en la producción de tarjetas.
 
-- modificaciones en jobs de mainframe
-- cambios en configuración de embozadoras
-- revisión de claves criptográficas
-- coordinación entre equipos de desarrollo, operaciones, seguridad informática y área comercial
+Responsabilidades:
+- Modificación de procesos en mainframe
+- Ajustes en configuración de embozadoras
+- Validación de claves criptográficas
+- Coordinación entre múltiples equipos (desarrollo, operaciones, seguridad y negocio)
 
-Sebastián participó coordinando las tareas entre los distintos equipos involucrados.
+Resultado:
+Implementación exitosa del nuevo layout cumpliendo con estándares de seguridad.
+
+Impacto:
+Garantía de cumplimiento normativo y continuidad operativa.
+
+---
+
+Proyecto: Chat CV Inteligente con IA Generativa
+
+Descripción:
+Desarrollo de un asistente conversacional que permite interactuar con el perfil profesional mediante lenguaje natural.
+
+El sistema responde preguntas sobre experiencia, proyectos y habilidades de forma dinámica, simulando una entrevista técnica o conversación con un recruiter.
+
+Características principales:
+- Interfaz conversacional interactiva
+- Respuestas basadas en información real (no inventada)
+- Capacidad de guiar conversaciones hacia contacto profesional
+
+Tecnologías utilizadas:
+- Modelos de lenguaje (LLMs) vía API
+- Python
+- Gradio
+
+Impacto:
+Transformación de un CV tradicional en una experiencia interactiva, mejorando la forma en que reclutadores acceden a la información profesional.

@@ -1,0 +1,124 @@
+PROYECTO: Chat CV Inteligente con IA Generativa
+
+Descripción general:
+Sebastián desarrolló un asistente conversacional inteligente que funciona como un CV interactivo. Este sistema permite a reclutadores o clientes consultar información profesional de forma dinámica mediante lenguaje natural.
+
+Arquitectura:
+El sistema está basado en una arquitectura de IA generativa con enfoque en agentes y recuperación de información (RAG - Retrieval Augmented Generation).
+
+Componentes principales:
+- Modelo de lenguaje (LLM) consumido vía API (Groq)
+- Sistema RAG para grounding de respuestas
+- Base de conocimiento estructurada en archivos de texto
+- Motor de embeddings con SentenceTransformers
+- Base de datos vectorial utilizando FAISS
+- Interfaz conversacional con Gradio
+- Integración con Formspree para captura de leads
+
+---
+
+RAG (Retrieval Augmented Generation):
+Se implementó un sistema RAG para mejorar la precisión de las respuestas del modelo.
+
+Funcionamiento:
+1. El usuario realiza una consulta
+2. Se genera un embedding de la pregunta
+3. Se buscan los chunks más relevantes en FAISS
+4. Se inyecta ese contexto al prompt del modelo
+5. El modelo responde basado en información real (no inventada)
+
+Esto permite:
+- Reducir alucinaciones
+- Respuestas más precisas
+- Control total del conocimiento del agente
+
+---
+
+Procesamiento de datos (chunking):
+La información se divide en fragmentos (chunks) de aproximadamente 500 caracteres.
+
+Objetivo:
+- Mejorar la calidad de embeddings
+- Aumentar precisión en búsqueda semántica
+- Evitar ruido en el contexto
+
+---
+
+Embeddings:
+Se utilizan embeddings semánticos con el modelo:
+- all-MiniLM-L6-v2 (SentenceTransformers)
+
+Uso:
+- Representación vectorial de texto
+- Comparación semántica entre consulta y conocimiento
+
+---
+
+Base de datos vectorial:
+Se implementa FAISS como motor de búsqueda vectorial.
+
+Ventajas:
+- Búsqueda rápida y eficiente
+- Escalable
+- Ideal para sistemas RAG
+
+---
+
+Sistema de agentes (Tool Calling):
+El sistema utiliza herramientas (tools) que el modelo puede invocar automáticamente.
+
+Herramientas implementadas:
+
+1. Registro de contacto:
+- Captura email, nombre y contexto
+- Envía la información mediante Formspree
+- Permite generación de leads automatizada
+
+2. Registro de preguntas no respondidas:
+- Guarda consultas que el sistema no pudo responder
+- Permite mejorar la base de conocimiento iterativamente
+
+---
+
+Lógica conversacional:
+El agente:
+- Detecta intención del usuario
+- Solicita datos cuando hay interés en contacto
+- Ejecuta herramientas automáticamente cuando corresponde
+- Evita mostrar detalles técnicos al usuario
+
+---
+
+Optimización del contexto:
+- Se limita el historial de conversación
+- Se recorta el contexto RAG para evitar errores por límite de tokens
+- Se prioriza información relevante
+
+---
+
+Deploy:
+- Aplicación desplegada en Hugging Face Spaces
+- Interfaz basada en Gradio
+- Integración continua mediante GitHub Actions
+
+---
+
+Tecnologías utilizadas:
+- Python
+- Gradio
+- FAISS
+- SentenceTransformers
+- Groq API (LLMs)
+- Formspree
+- GitHub Actions
+- Hugging Face Spaces
+
+---
+
+Valor del proyecto:
+Este proyecto demuestra la capacidad de Sebastián para:
+- Diseñar sistemas de IA de extremo a extremo
+- Integrar modelos generativos en aplicaciones reales
+- Implementar arquitecturas modernas de agentes
+- Trabajar con RAG y bases vectoriales
+- Construir soluciones orientadas a negocio (captura de leads)

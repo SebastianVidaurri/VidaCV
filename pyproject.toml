@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "faiss-cpu>=1.13.2",
     "gradio>=4.38.0",
     "huggingface-hub>=1.6.0",
     "openai>=2.26.0",
@@ -12,4 +13,5 @@ dependencies = [
     "pypdf>=6.8.0",
     "python-dotenv>=1.2.2",
     "requests>=2.32.5",
+    "sentence-transformers>=5.3.0",
 ]
